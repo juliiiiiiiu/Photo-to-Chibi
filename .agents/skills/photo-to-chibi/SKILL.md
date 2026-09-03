@@ -46,7 +46,7 @@ If the user voluntarily supplies a style reference for the current request, use 
 
 ## Generate
 
-Use the built-in image generation tool by default. This is a photo-to-illustration transformation, so use the `style-transfer` use case while explicitly preserving the subject's identity features.
+Use the host's available image-generation or image-editing capability. Prefer an image-to-image portrait transformation that can receive the current identity photo directly; if the host exposes named modes, choose its closest image-editing or style-transfer mode. Do not assume a particular vendor, model, command, or tool name. If the host cannot generate or edit images, return one production-ready prompt that preserves all applicable constraints and clearly state that no image was generated.
 
 - Use only the current user's identity source or sources, plus an optional style reference supplied in that same request.
 - If an identity source is already visible in the current conversation, do not reopen it merely to inspect it again. If it exists only as a local file, inspect it once before generation.

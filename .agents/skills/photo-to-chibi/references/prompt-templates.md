@@ -5,7 +5,7 @@ Use the applicable template as a concise scaffold. Replace bracketed fields with
 ## Feminine styling
 
 ```text
-Use case: style-transfer
+Workflow: image-to-image portrait transformation
 Asset type: [opaque-white square character by default / opaque-white full-body character / opaque-white phone-wallpaper character]
 Input images: Image 1 is the identity source. Any additional image was supplied by the user in this request and is optional high-level style guidance only.
 Primary request: Redesign the person in Image 1 as an original feminine-styled, extremely super-deformed Japanese-anime-inspired chibi. This is a character redesign, not a cartoon filter. Do not preserve the source crop, realistic facial anatomy, or adult body structure.
@@ -25,7 +25,7 @@ Avoid: any designed background or decorative element outside the figure, white d
 ## Masculine styling
 
 ```text
-Use case: style-transfer
+Workflow: image-to-image portrait transformation
 Asset type: [opaque-white square character by default / opaque-white full-body character / opaque-white phone-wallpaper character]
 Input images: Image 1 is the identity source. Any additional image was supplied by the user in this request and is optional high-level style guidance only.
 Primary request: Redesign the person in Image 1 as an original masculine-styled, extremely super-deformed Japanese-anime-inspired chibi. This is a character redesign, not a cartoon filter. Do not preserve the source crop, realistic facial anatomy, or adult body structure.
@@ -45,7 +45,7 @@ Avoid: any designed background or decorative element outside the figure, white d
 ## Explicitly requested couple
 
 ```text
-Use case: style-transfer
+Workflow: image-to-image portrait transformation
 Asset type: [opaque-white square couple by default / opaque-white full-body couple / opaque-white phone-wallpaper couple]
 Input images: Image 1 and, if needed, Image 2 are identity sources. Any additional image was supplied by the user in this request and is optional high-level style or interaction guidance only.
 Primary request: Redesign the couple as two original, extremely super-deformed Japanese-anime-inspired chibis with one clean unified style. This is a character redesign, not a cartoon filter. Do not preserve the source crop, realistic facial anatomy, or adult body structure.
@@ -66,7 +66,7 @@ Avoid: any designed background or decorative element outside the figures, white 
 ## Automatic family or group
 
 ```text
-Use case: style-transfer
+Workflow: image-to-image portrait transformation
 Asset type: [opaque-white square family or group by default / opaque-white 4:5 group]
 Input images: Image 1 is the source photo. Every visible person is an identity source. Do not omit recognisable people.
 Primary request: Redesign every visible person in Image 1 as original, highly super-deformed Japanese-anime-inspired chibis in one clean unified style. This is character redesign, not a cartoon filter. Automatically use a family composition only when the source clearly shows a mixed-age family; otherwise use a friendly group composition without naming relationships. Do not preserve the source crop, realistic facial anatomy, or adult body structure.
