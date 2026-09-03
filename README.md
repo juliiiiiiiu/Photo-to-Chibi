@@ -2,7 +2,7 @@
 
 Turn an uploaded photo of one or more people into clean, highly super-deformed anime-inspired chibi artwork on a uniform white background.
 
-The single source of truth is `.agents/skills/photo-to-chibi/`. The core `SKILL.md` and its references are vendor-neutral. `agents/openai.yaml` is optional OpenAI/Codex UI metadata; Grok and other hosts can ignore it.
+The single source of truth is the visible `skills/photo-to-chibi/` directory. The core `SKILL.md` and its references are vendor-neutral. `agents/openai.yaml` is optional OpenAI/Codex UI metadata; Grok and other hosts can ignore it.
 
 ## Requirements
 
@@ -16,17 +16,17 @@ Open this repository as the Codex project and invoke:
 $photo-to-chibi
 ```
 
-Codex discovers the repository skill from `.agents/skills/photo-to-chibi`.
+Codex discovers the repository skill through `.agents/skills/photo-to-chibi`, which is only a symbolic link to the visible source directory. There is no duplicate skill content to maintain.
 
 ## Use with Grok Build
 
-Grok Build discovers project skills from `.grok/skills`, user skills from `~/.grok/skills`, and additional directories configured under `[skills] paths`. This repository keeps the Codex-compatible layout, so point Grok Build at the existing directory instead of copying the skill.
+Grok Build discovers project skills from `.grok/skills`, user skills from `~/.grok/skills`, and additional directories configured under `[skills] paths`. Point Grok Build at the visible source directory instead of copying the skill.
 
 Add the following to `~/.grok/config.toml`, replacing the example with the absolute path of your clone:
 
 ```toml
 [skills]
-paths = ["/absolute/path/to/Q-animme/.agents/skills"]
+paths = ["/absolute/path/to/Q-animme/skills"]
 ```
 
 Verify discovery and start Grok Build:
@@ -46,7 +46,7 @@ Then upload or provide the portrait and invoke:
 For a one-off run without changing Grok configuration, open Grok Build in the repository and ask:
 
 ```text
-Read @.agents/skills/photo-to-chibi/SKILL.md and follow it with my supplied portrait. Read every reference that SKILL.md routes to for this request.
+Read @skills/photo-to-chibi/SKILL.md and follow it with my supplied portrait. Read every reference that SKILL.md routes to for this request.
 ```
 
 If the current Grok Build environment does not expose an image-generation or image-editing capability, it will return the final production prompt for use with an image generator.
@@ -56,7 +56,7 @@ If the current Grok Build environment does not expose an image-generation or ima
 Grok Bot uses saved or packaged skills. After this repository is available to the Bot through a public link, attached files, or a connected GitHub account, ask it:
 
 ```text
-Read .agents/skills/photo-to-chibi/SKILL.md and every referenced file in that folder. Save the complete workflow as a private skill named "Photo to Chibi" without changing its identity, composition, rendering, safety, or quality constraints.
+Read skills/photo-to-chibi/SKILL.md and every referenced file in that folder. Save the complete workflow as a private skill named "Photo to Chibi" without changing its identity, composition, rendering, safety, or quality constraints.
 ```
 
 Open **Settings → Plugins → Yours**, enable the private skill for the selected Bot, attach a portrait, and invoke the skill from the `/` menu.
