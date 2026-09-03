@@ -1,4 +1,4 @@
 interface:
   display_name: "Photo to Chibi"
-  short_description: "Create cute anime chibis on a clean white background"
-  default_prompt: "Use $photo-to-chibi with my uploaded photo and, without needing any further prompt, redesign every visible person as clean, extremely cute, highly super-deformed anime chibis on a perfectly uniform opaque white background."
+  short_description: "Create cute anime chibis on white or scenic backgrounds"
+  default_prompt: "Use $photo-to-chibi with my uploaded photo and, without needing any further prompt, redesign every visible person as clean, extremely cute, highly super-deformed anime chibis on a perfectly uniform opaque white background by default. Use a scenic background only when I request one."
