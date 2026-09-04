@@ -25,10 +25,6 @@ $photo-to-chibi
 ```
 
 ```text
-/photo-to-chibi Place the character in a warm, sunlit flower garden.
-```
-
-```text
 /photo-to-chibi Create a cozy nighttime city background with glowing streetlights.
 ```
 
