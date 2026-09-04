@@ -4,6 +4,38 @@ Turn an uploaded photo of one or more people into clean, highly super-deformed a
 
 The single source of truth is the visible `skills/photo-to-chibi/` directory. The core `SKILL.md` and its references are vendor-neutral. `agents/openai.yaml` is optional OpenAI/Codex UI metadata; Grok and other hosts can ignore it.
 
+## Try it
+
+Upload a photo, then use one of these prompts:
+
+```text
+$photo-to-chibi
+```
+
+```text
+/photo-to-chibi Keep the original background.
+```
+
+```text
+/photo-to-chibi Add a scenic mountain and lake background.
+```
+
+```text
+/photo-to-chibi Add a charming town-view background.
+```
+
+```text
+/photo-to-chibi Place the character in a warm, sunlit flower garden.
+```
+
+```text
+/photo-to-chibi Create a cozy nighttime city background with glowing streetlights.
+```
+
+```text
+/photo-to-chibi Use a dreamy pastel sky with soft clouds and floating sparkles.
+```
+
 ## Requirements
 
 The host needs to be able to inspect the supplied identity image and generate or edit a raster image. When image generation is unavailable, the skill returns a production-ready prompt instead of claiming that it generated an image.

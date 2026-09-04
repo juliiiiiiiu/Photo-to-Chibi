@@ -21,7 +21,6 @@ Use the default entry point with an uploaded photo, or copy one of these English
 - `/photo-to-chibi Keep the original background.`
 - `/photo-to-chibi Add a scenic mountain and lake background.`
 - `/photo-to-chibi Add a charming town-view background.`
-- `Keep the original background and apply only a subtle Japanese anime-style treatment.`
 - `/photo-to-chibi Place the character in a warm, sunlit flower garden.`
 - `/photo-to-chibi Create a cozy nighttime city background with glowing streetlights.`
 - `/photo-to-chibi Use a dreamy pastel sky with soft clouds and floating sparkles.`
