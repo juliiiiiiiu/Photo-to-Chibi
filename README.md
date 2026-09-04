@@ -1,8 +1,18 @@
 # Photo to Chibi
 
-Turn an uploaded photo of one or more people into clean, highly super-deformed anime-inspired chibi artwork on a uniform white background.
+Make everyone super cute. Turn an uploaded photo of one or more people into clean, highly super-deformed anime-inspired chibi artwork on a uniform white background.
 
 The single source of truth is the visible `skills/photo-to-chibi/` directory. The core `SKILL.md` and its references are vendor-neutral. `agents/openai.yaml` is optional OpenAI/Codex UI metadata; Grok and other hosts can ignore it.
+
+## Examples
+
+| Portrait Close-up | Couple Portrait |
+| --- | --- |
+| <img src="examples/portrait-close-up.png" alt="Portrait Close-up" width="360"> | <img src="examples/couple-portrait.jpg" alt="Couple Portrait" width="360"> |
+
+| Scenic Portrait | Full-body Portrait |
+| --- | --- |
+| <img src="examples/scenic-portrait.jpg" alt="Scenic Portrait" width="360"> | <img src="examples/full-body-portrait.png" alt="Full-body Portrait" width="360"> |
 
 ## Try it
 
