@@ -13,6 +13,19 @@ Inspect every user-uploaded identity photo before generating. The published skil
 
 The default **Try it** experience needs no user-written prompt. Based on the number of recognisable people, automatically choose a single-person, couple-style pair, or group composition; use a family composition only when the image clearly shows a mixed-age family. Preserve every recognisable person and do not infer relationships beyond what the image establishes. An explicit user request for a single person, couple, family, group, feminine, masculine, or neutral treatment always overrides the automatic route.
 
+## Try it prompts
+
+Use the default entry point with an uploaded photo, or copy one of these English prompts:
+
+- `$photo-to-chibi`
+- `/photo-to-chibi Keep the original background.`
+- `/photo-to-chibi Add a scenic mountain and lake background.`
+- `/photo-to-chibi Add a charming town-view background.`
+- `Keep the original background and apply only a subtle Japanese anime-style treatment.`
+- `/photo-to-chibi Place the character in a warm, sunlit flower garden.`
+- `/photo-to-chibi Create a cozy nighttime city background with glowing streetlights.`
+- `/photo-to-chibi Use a dreamy pastel sky with soft clouds and floating sparkles.`
+
 Use neutral styling when presentation cues are mixed or unclear; do not claim anyone's gender or relationship in the response. Do not ask for a style or relationship prompt merely because several people are present. Ask for a clearer photo only when a face, hairstyle, distinctive accessory, or clothing is too obscured to preserve.
 
 ## Lock the visual target
