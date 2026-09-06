@@ -30,10 +30,21 @@ When constraints conflict, preserve them in this order:
 |---|---:|---:|---:|---|
 | One person | 2.4–2.9 heads | 35–42% | 65–80% of head width | One complete figure |
 | Couple | 2.4–2.9 heads each | 35–42% | 65–80% of head width | Two equal figures, heads close |
-| Family or group, 3–6 | 1.65–1.90 heads each | 52–60% | 65–85% of head width | Compact staggered cluster |
+| Family or group, 3–6 | 1.65–1.90 heads each, except recognisable young children | 52–60%, except recognisable young children | 65–85% of head width | Compact staggered cluster |
 | Group, 7+ | 1.80–2.10 heads each | 48–55% | 70–85% of head width | Readable multi-row lineup |
 
-People in the same row should normally stay within about 10% of one another's head scale. Preserve meaningful child-versus-adult height differences without turning adults back into standard anatomy. For one-person and couple routes, show the complete torso, legs, and shoes clearly enough that the 2.4–2.9-head ratio is immediately readable.
+People in the same age band and row should normally stay within about 10% of one another's head scale. Preserve meaningful child-versus-adult height differences without turning adults back into standard anatomy. For one-person and couple routes, show the complete torso, legs, and shoes clearly enough that the 2.4–2.9-head ratio is immediately readable.
+
+## Family age differentiation
+
+Use these rules only when a young child is clear from several visual cues in the source—such as face, body scale, proportions, clothing, and their relationship to nearby people—or when the user identifies the person as a child. Never determine age from height alone when perspective or pose could account for it.
+
+- A recognisable young child must read as visibly younger at normal viewing size, not only as a smaller adult. Use approximately 1.45–1.70 heads tall with a head occupying about 58–66% of their height; use shorter, softer limbs, smaller hands and shoes, and a rounder, shorter lower face than the adults.
+- Keep the child's full figure around 60–78% of the height of the nearest standing adult when the source supports that relationship. Preserve source-specific height differences rather than forcing every child to the same size. Do not use equal head sizes for an adult and a young child unless the source's perspective clearly requires it.
+- Adults accompanying a recognisable young child should remain about 1.75–2.05 heads tall with a comparatively smaller head share of roughly 48–56%. This contrast must remain clear in the final composition even when everyone is rendered in extreme chibi proportions.
+- Preserve each child's own hairstyle, glasses, clothing, accessories, skin tone, and pose. Use age-appropriate facial simplification: rounded cheeks, a short chin, and bright graphic eyes, while avoiding angular adult jawlines, adult body proportions, mature makeup, or invented adult styling.
+- Place children at a believable height relative to the adults—standing beside them, being held, sitting, or otherwise matching the source pose. Do not put every person on a forced shared baseline that erases the source's age and height relationship.
+- Before delivery, inspect the family or group at normal preview size. If a viewer could easily read the child as a small adult or as the same age as nearby adults, reduce the child's body/limb scale and increase the child-to-adult head-share contrast before retrying.
 
 ## Face construction
 

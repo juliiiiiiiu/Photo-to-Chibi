@@ -1,6 +1,6 @@
 # Photo to Chibi
 
-Make everyone super cute. Turn an uploaded photo of one or more people into clean, highly super-deformed anime-inspired chibi artwork on a uniform white background.
+Make everyone super cute. Turn an uploaded photo of one or more people into clean, highly super-deformed anime-inspired chibi artwork, then give it a subtle, live-photo-like looping GIF effect. Static chibi images remain available when explicitly requested.
 
 The single source of truth is the visible `skills/photo-to-chibi/` directory. The core `SKILL.md` and its references are vendor-neutral. `agents/openai.yaml` is optional OpenAI/Codex UI metadata; Grok and other hosts can ignore it.
 
@@ -21,6 +21,8 @@ Upload a photo, then use one of these prompts:
 ```text
 $photo-to-chibi
 ```
+
+By default, the skill asks you to choose a motion style—natural, cute, playful, or cool—then delivers a short animated GIF with understated facial and character motion. Ask for a static image to skip the GIF effect.
 
 ```text
 /photo-to-chibi Keep the original background.

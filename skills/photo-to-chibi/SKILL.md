@@ -1,11 +1,13 @@
 ---
 name: photo-to-chibi
-description: Transform uploaded people photos into clean, highly super-deformed Japanese-anime-inspired chibi character art with sparse linework, flat cel colour, an optional solid-white or scenic background, and automatic single-person, couple, family, or group composition. Use for cute chibi character art, not realistic caricatures, painterly portraits, generic cartoons, or copies of named characters.
+description: Transform uploaded people photos into clean, highly super-deformed Japanese-anime-inspired chibi art and short live-photo-like looping GIFs, with automatic single-person, couple, family, or group composition. Use for cute chibi stills or subtle animated portraits, not realistic caricatures, painterly portraits, generic cartoons, or copies of named characters.
 ---
 
 # Photo to Chibi
 
 Create original, recognisable anime chibis through character redesign rather than a cartoon filter. Use super-deformation, symbolic anime faces, sparse controlled lines, flat cel colour, one clear emotion, and clean subject isolation. The result must read immediately as cute anime chibi rather than a realistic caricature, watercolour portrait, children's-book cartoon, social-media sticker template, or standard-proportioned anime portrait.
+
+The default result is a short, subtle, live-photo-like looping GIF built from a clean chibi master image. A user who explicitly asks for a still image receives only the still.
 
 ## Inspect and route
 
@@ -13,11 +15,19 @@ Inspect every user-uploaded identity photo before generating. The published skil
 
 The default **Try it** experience needs no user-written prompt. Based on the number of recognisable people, automatically choose a single-person, couple-style pair, or group composition; use a family composition only when the image clearly shows a mixed-age family. Preserve every recognisable person and do not infer relationships beyond what the image establishes. An explicit user request for a single person, couple, family, group, feminine, masculine, or neutral treatment always overrides the automatic route.
 
+When a person is visibly a young child from multiple source cues, or the user identifies them as a child, apply the child-specific family rules in [references/chibi-recipe.md](references/chibi-recipe.md). The child must remain visibly younger than accompanying adults in the final chibi, not merely shorter. Do not infer that a person is a child from relative height alone when perspective, seating, or distance could explain it.
+
+For the default animated route, ask exactly one short style question before generating: **“想要哪种动效风格：自然、可爱、搞怪，还是酷酷？”** Do not ask when the user already named one of these styles or supplied an equally clear custom motion direction. Do not ask separate questions about individual movements; infer them from the selected style. If the user does not answer but asks the work to continue, use `自然`. If the user explicitly requests only a static image, skip the animation question and animation stage.
+
 ## Try it prompts
 
-Use the default entry point with an uploaded photo, or copy one of these English prompts:
+Use the default entry point with an uploaded photo, or copy one of these prompts:
 
 - `$photo-to-chibi`
+- `/photo-to-chibi 自然风格，做成轻微眨眼的循环 GIF。`
+- `/photo-to-chibi 可爱风格，做成类似 Live Photo 的轻动效。`
+- `/photo-to-chibi 搞怪风格，动作夸张一点但保持本人特征。`
+- `/photo-to-chibi 酷酷的微表情和轻微头发摆动。`
 - `/photo-to-chibi Keep the original background.`
 - `/photo-to-chibi Add a scenic mountain and lake background.`
 - `/photo-to-chibi Add a charming town-view background.`
@@ -88,9 +98,28 @@ Reinterpret any key action or prop in refined chibi form. Keep exactly one meani
 
 For couples, families, and groups, keep every face separately recognisable and retain individual hair, clothing, and accessories. Use natural, non-sexual interactions. Do not alter a person's apparent age, create romantic interactions in family or group compositions, merge bodies, or make one person a decorative secondary character.
 
+## Animate the chibi
+
+After approving the still master internally, read [references/animation-recipe.md](references/animation-recipe.md) and apply the selected style. Animate the chibi result, not the original photograph, unless the user explicitly asks to keep a photographic look. Preserve the master image's exact person count, identity cues, clothing, crop, palette, linework, and background across the entire loop.
+
+### GIF delivery contract
+
+An animated request is not complete when the image generator returns a PNG. Treat that PNG as the still master only. The final delivered artifact must be a local or attached `.gif` file containing at least three frames; never present the PNG as the animated result. If the master arrived only as an in-chat image, export or retrieve it to a local working path before assembling the GIF.
+
+Use the first viable route below:
+
+1. Prefer an image-to-video or portrait-animation capability that can use the still master as its visual source. Request a 2–4 second fixed-camera loop, then export or convert that result to GIF.
+2. When consistent image editing is available, create the minimal ordered keyframes in the animation recipe and assemble them with [scripts/build_loop_gif.py](scripts/build_loop_gif.py).
+3. When the host can create only the still master, do not substitute a zoom, pan, bounce, global scale transform, or other camera-only effect for the requested facial animation. Use a consistent image-editing route to create the necessary expression keyframes, or state that a facial-animation-capable generator is unavailable. The optional [scripts/make_subtle_motion_gif.py](scripts/make_subtle_motion_gif.py) is reserved for a user who explicitly requests a non-facial, camera-like micro-motion loop; it is not a valid default result for this skill.
+
+Before responding, verify the actual file extension is `.gif` and its frame count is at least three. If it is not, do not deliver an image as though it were animated. State the blocked capability plainly and provide the stable PNG only as a separate still-image fallback.
+
+Review the actual loop before delivery. Reject and retry once when there is identity drift, duplicated or disappearing features, wobbling outlines, unintended lip movement, background swimming, camera motion, abrupt first-to-last-frame change, unreadably fast blinking, or no visible expression change between the neutral and peak frames. If the retry still fails, provide the best stable still separately and explain that the available generator could not produce the required facial animation; never replace it with a camera-only GIF.
+
 ## Publication and rights guardrails
 
 - Keep the published package limited to original text, code, and assets that the publisher owns or has an explicit redistribution licence for. Do not include user photos, generated samples, screenshots, third-party art, logos, fonts, or model outputs with uncertain rights.
 - Treat uploaded photos and current-request style references as transient inputs only. Do not save, package, publish, train on, or reuse them in another user's request.
+- Keep temporary animation frames transient. Do not add them to the skill package or reuse them in another request.
 - Do not reproduce named characters, franchises, logos, copyrighted artwork, or a particular artist's signature visual expression. Offer an original generic chibi treatment instead.
 - The user is responsible for having permission to upload and transform every person and source image. This skill does not grant rights to photos or third-party material.
