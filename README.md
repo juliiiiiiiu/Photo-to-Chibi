@@ -123,3 +123,9 @@ Grok Bot currently stores the saved private skill in the Bot account; its docume
 - `agents/openai.yaml` improves the Codex interface only and does not lock the skill to OpenAI.
 - `.agents/plugins/marketplace.json` lets Codex install the packaged plugin from this Git repository.
 - Host-specific tool names are intentionally absent from the core workflow.
+
+## Policies and support
+
+- Read the [privacy policy](PRIVACY.md).
+- Read the [terms of use](TERMS.md).
+- Request support through [GitHub Issues](https://github.com/juliiiiiiiu/Photo-to-Chibi/issues).

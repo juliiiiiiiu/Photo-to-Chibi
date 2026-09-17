@@ -28,7 +28,13 @@
       "GIF animation"
     ],
     "websiteURL": "https://github.com/juliiiiiiiu/Photo-to-Chibi",
+    "privacyPolicyURL": "https://github.com/juliiiiiiiu/Photo-to-Chibi/blob/main/PRIVACY.md",
+    "termsOfServiceURL": "https://github.com/juliiiiiiiu/Photo-to-Chibi/blob/main/TERMS.md",
     "logo": "./assets/juliechibi-square.png",
-    "defaultPrompt": "Turn my uploaded photo into a cute chibi live photo."
+    "defaultPrompt": [
+      "Turn my uploaded photo into a cute chibi live photo.",
+      "Create a static chibi portrait from my uploaded photo.",
+      "Make a subtle looping chibi GIF with a scenic background."
+    ]
   }
 }

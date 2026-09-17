@@ -1,0 +1,44 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "photo-to-chibi",
+  "version": "0.1.0",
+  "description": "Turn people photos into original chibi portraits and subtle live-photo-like looping GIFs.",
+  "author": {
+    "name": "Julie",
+    "url": "https://github.com/juliiiiiiiu"
+  },
+  "homepage": "https://github.com/juliiiiiiiu/Photo-to-Chibi",
+  "repository": "https://github.com/juliiiiiiiu/Photo-to-Chibi",
+  "keywords": [
+    "chibi",
+    "portrait",
+    "image-generation",
+    "animation",
+    "gif"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Photo To Chibi",
+        "shortDescription": "Make anyone into a living chibi portrait.",
+        "longDescription": "Transform an uploaded photo of one person, a couple, a family, or a group into recognisable original chibi art, with an optional subtle looping GIF animation.",
+        "developerName": "Julie",
+        "category": "Creativity",
+        "capabilities": [
+          "Image generation",
+          "Image editing",
+          "GIF animation"
+        ],
+        "websiteURL": "https://github.com/juliiiiiiiu/Photo-to-Chibi",
+        "privacyPolicyURL": "https://github.com/juliiiiiiiu/Photo-to-Chibi/blob/main/PRIVACY.md",
+        "termsOfServiceURL": "https://github.com/juliiiiiiiu/Photo-to-Chibi/blob/main/TERMS.md",
+        "logo": "./assets/juliechibi-square.png",
+        "defaultPrompt": [
+          "Turn my uploaded photo into a cute chibi live photo.",
+          "Create a static chibi portrait from my uploaded photo.",
+          "Make a subtle looping chibi GIF with a scenic background."
+        ]
+      }
+    }
+  }
+}
