@@ -1,0 +1,20 @@
+{
+  "name": "photo-to-chibi",
+  "interface": {
+    "displayName": "Photo To Chibi"
+  },
+  "plugins": [
+    {
+      "name": "photo-to-chibi",
+      "source": {
+        "source": "local",
+        "path": "./plugins/photo-to-chibi"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Creativity"
+    }
+  ]
+}

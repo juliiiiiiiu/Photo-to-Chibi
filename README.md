@@ -2,7 +2,7 @@
 
 Make everyone super cute. Turn an uploaded photo of one or more people into clean, highly super-deformed anime-inspired chibi artwork, then give it a subtle, live-photo-like looping GIF effect. Static chibi images remain available when explicitly requested.
 
-The single source of truth is the visible `skills/photo-to-chibi/` directory. The core `SKILL.md` and its references are vendor-neutral. `agents/openai.yaml` is optional OpenAI/Codex UI metadata; Grok and other hosts can ignore it.
+The authoring source is the visible `skills/photo-to-chibi/` directory. The core `SKILL.md` and its references are vendor-neutral. `agents/openai.yaml` is optional OpenAI/Codex UI metadata; Grok and other hosts can ignore it. The `plugins/photo-to-chibi/` directory contains the packaged copy used by the Codex marketplace.
 
 ## Examples
 
@@ -50,7 +50,20 @@ The host needs to be able to inspect the supplied identity image and generate or
 
 ## Use with Codex
 
-Open this repository as the Codex project and invoke:
+Install the Git marketplace and its plugin:
+
+```bash
+codex plugin marketplace add juliiiiiiiu/Photo-to-Chibi
+codex plugin add photo-to-chibi@photo-to-chibi
+```
+
+Start a new Codex task after installation. Upload a photo, then invoke:
+
+```text
+$photo-to-chibi
+```
+
+To use the repository skill without installing the plugin, open this repository as the Codex project and invoke:
 
 ```text
 $photo-to-chibi
@@ -108,4 +121,5 @@ Grok Bot currently stores the saved private skill in the Bot account; its docume
 - `SKILL.md` provides the portable workflow and required `name` and `description` frontmatter.
 - `references/` contains the visual recipe, prompt templates, and quality checks used by every host.
 - `agents/openai.yaml` improves the Codex interface only and does not lock the skill to OpenAI.
+- `.agents/plugins/marketplace.json` lets Codex install the packaged plugin from this Git repository.
 - Host-specific tool names are intentionally absent from the core workflow.

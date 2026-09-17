@@ -1,0 +1,4 @@
+interface:
+  display_name: "Photo to Chibi GIF"
+  short_description: "Turn a photo into a subtly animated chibi GIF"
+  default_prompt: "Use $photo-to-chibi with my uploaded photo and ask me to choose an animation style."
