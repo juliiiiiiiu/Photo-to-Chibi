@@ -4,6 +4,14 @@ Make everyone super cute. Turn an uploaded photo of one or more people into clea
 
 The authoring source is the visible `skills/photo-to-chibi/` directory. The core `SKILL.md` and its references are vendor-neutral. `agents/openai.yaml` is optional OpenAI/Codex UI metadata; Grok and other hosts can ignore it. The `plugins/photo-to-chibi/` directory contains the packaged copy used by the Codex marketplace.
 
+## Animated previews
+
+Short, looping chibi GIFs — from a clean white background to a sunlit outdoor scene.
+
+| Chibi Avatar | Scenic Chibi |
+| --- | --- |
+| <img src="examples/avatar.gif" alt="Animated chibi avatar on a white background" height="360"> | <img src="examples/Jen.gif" alt="Animated chibi in a floral dress on a sunlit path" height="360"> |
+
 ## Examples
 
 | Portrait Close-up | Couple Portrait |
